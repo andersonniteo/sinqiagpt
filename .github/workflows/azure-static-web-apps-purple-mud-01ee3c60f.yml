@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4  # Atualize para a versão mais recente
         with:
           submodules: true
           lfs: false
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4  # Atualize para a versão mais recente
         with:
-          node-version: '18'  # Atualize para a versão necessária de Node.js
+          node-version: '20'  # Use a versão Node.js 20
       - name: Install dependencies
         run: npm install
       - name: Build Angular app
